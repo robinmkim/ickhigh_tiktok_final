@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "574833744411",
+    "project_id": "ickhigh-tiktok-final",
+    "storage_bucket": "ickhigh-tiktok-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574833744411:android:e4615d51eea54da1abf6be",
+        "android_client_info": {
+          "package_name": "com.example.ickhigh_tiktok_final"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHnfJBuNdvHQa87LZBXW7GqAl913HggSY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
