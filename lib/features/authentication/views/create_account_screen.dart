@@ -19,7 +19,6 @@ class CreateAccountScreen extends ConsumerStatefulWidget {
 class _CreateAccountScreenState extends ConsumerState<CreateAccountScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _birthdayController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   String _password = "";
@@ -74,14 +73,6 @@ class _CreateAccountScreenState extends ConsumerState<CreateAccountScreen> {
         _password.length <= 20;
   }
 
-  void _setTextFieldDate(DateTime date) {
-    final textDate = date.toString().split(" ").first;
-    _birthdayController.value = TextEditingValue(text: textDate);
-    setState(() {
-      isDateSelected = true;
-    });
-  }
-
   void _onScaffoldTap() {
     FocusScope.of(context).unfocus();
   }
@@ -114,33 +105,6 @@ class _CreateAccountScreenState extends ConsumerState<CreateAccountScreen> {
       MaterialPageRoute(
         builder: (context) => const LogInScreen(),
       ),
-    );
-  }
-
-  void _showDatePicker(BuildContext context) {
-    showCupertinoModalPopup(
-      context: context,
-      builder: (BuildContext context) {
-        return CupertinoActionSheet(
-          title: const Text('Select a Date'),
-          actions: <Widget>[
-            SizedBox(
-              height: 200,
-              child: CupertinoDatePicker(
-                mode: CupertinoDatePickerMode.date,
-                initialDateTime: DateTime.now(),
-                onDateTimeChanged: _setTextFieldDate,
-              ),
-            ),
-          ],
-          cancelButton: CupertinoActionSheetAction(
-            child: const Text('Done'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          ),
-        );
-      },
     );
   }
 
