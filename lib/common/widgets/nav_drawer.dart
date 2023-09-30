@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ickhigh_tiktok_final/common/darkmode/views/darkmode.dart';
 import 'package:ickhigh_tiktok_final/features/authentication/repos/authentication_repo.dart';
 
 class NavDrawer extends ConsumerWidget {
@@ -37,11 +38,7 @@ class NavDrawer extends ConsumerWidget {
             title: const Text('Settings'),
             onTap: () => {Navigator.of(context).pop()},
           ),
-          ListTile(
-            leading: const Icon(Icons.border_color),
-            title: const Text('Feedback'),
-            onTap: () => {Navigator.of(context).pop()},
-          ),
+          const Darkmode(),
           ListTile(
             leading: const Icon(Icons.exit_to_app),
             title: const Text('Logout'),

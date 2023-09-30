@@ -6,16 +6,17 @@ import 'package:ickhigh_tiktok_final/features/authentication/view_models/signup_
 import 'package:ickhigh_tiktok_final/features/authentication/views/log_in_screen.dart';
 import 'package:ickhigh_tiktok_final/features/authentication/views/widgets/form_button.dart';
 
-class UsernameScreen extends ConsumerStatefulWidget {
-  const UsernameScreen({
+class CreateAccountScreen extends ConsumerStatefulWidget {
+  const CreateAccountScreen({
     super.key,
   });
 
   @override
-  ConsumerState<UsernameScreen> createState() => _UsernameScreenState();
+  ConsumerState<CreateAccountScreen> createState() =>
+      _CreateAccountScreenState();
 }
 
-class _UsernameScreenState extends ConsumerState<UsernameScreen> {
+class _CreateAccountScreenState extends ConsumerState<CreateAccountScreen> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _birthdayController = TextEditingController();

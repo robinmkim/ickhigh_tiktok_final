@@ -39,9 +39,7 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
     return Scaffold(
       drawer: const NavDrawer(),
       resizeToAvoidBottomInset: false,
-      appBar: _selectedIndex == 4
-          ? null
-          : AppBar(title: const FaIcon(FontAwesomeIcons.at)),
+      appBar: AppBar(title: const Text("MOOD")),
       body: Stack(
         children: [
           Offstage(

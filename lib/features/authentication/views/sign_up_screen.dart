@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ickhigh_tiktok_final/features/authentication/views/log_in_screen.dart';
-import 'package:ickhigh_tiktok_final/features/authentication/views/username_screen.dart';
+import 'package:ickhigh_tiktok_final/features/authentication/views/create_account_screen.dart';
 import 'package:ickhigh_tiktok_final/features/authentication/views/widgets/login_type_button.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class SignUpScreen extends StatelessWidget {
 
   void _onEmailTap(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const UsernameScreen(),
+      builder: (context) => const CreateAccountScreen(),
     ));
   }
 
